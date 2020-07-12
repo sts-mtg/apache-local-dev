@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  apache:
+    build:
+      context: ./docker/apache
+
+    ports:
+    - '1080:80'
+    volumes:
+    - ./:/var/www/html
+    privileged: true
+
